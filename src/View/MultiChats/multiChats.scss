@@ -1,0 +1,825 @@
+
+
+.mainMultiChat{
+    margin-top: 50px;
+    width: calc(100vw - 70px);
+    margin-left: 2px;
+    height: calc(100vh - 50px) !important;
+    position: relative;
+        .conversationQueriesContainer{
+            position: relative;
+            position: fixed;      
+            width: 27rem;
+            height: calc(100vh - 45px) !important;
+            
+            background: #F5F7FB;
+            .conversationQueriesContainerTop{
+                padding: 10px 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .topIconTitle{
+
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    .icon{
+                        font-size: 19px;
+                        color: #32BECA;
+                        margin-bottom: 3px;
+
+                    }
+                    .title{
+                        font-size: 17px;
+                        font-weight: 600;
+                        color: #232336;
+                    }
+                }
+                .newConBtn{
+                    border: none;
+                    background: #CEECF1;
+                    color: #32BECA;
+                    padding: 2px 5px;
+                    border-radius: 5px;
+                    font-size: 13px;
+                    
+                    &:hover{
+                        color: #CEECF1;
+                        background: #32BECA;
+                        
+                    }
+                }
+            }
+
+            .conversationQueriesheader{
+                padding: 10px 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                .headerAssignedBtn{
+                    display: flex;
+                    align-items: center;
+                    gap: 30px;
+                    cursor: pointer;
+
+                  
+                    .assignedBtnList {
+                        position: relative;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: #a0a9b6;
+
+                        &::after {
+                            content: '';
+                            width: 100%;
+                            height: 4px;
+                            background: #32beca;
+                            position: absolute;
+                            bottom: -4px;
+                            left: 0;
+                            border-radius: 20px;
+                            transform: scaleX(0);
+                            transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+                            transform-origin: right center;
+                        }
+
+                        &:hover::after {
+                            transform: scaleX(1);
+                            transform-origin: left center;
+                            transition-duration: 0.4s;
+                        }
+
+                        &.active {
+                            color: #5c6169;
+                        }
+
+                        &.active::after {
+                            transform: scaleX(1);
+                            transform-origin: left center;
+                            transition-duration: 0.4s;
+                        }
+                    }
+                }
+
+                .queriesSearch{
+
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    .searchIconInput{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        padding-left: 10px;
+                        border: 2px solid #E5E8EE;
+                        border-radius: 10px;
+                        span{
+                            color: #AEB0BD;
+                        }
+                        input{
+                            border: none;
+                            background: transparent;
+                            outline: none;
+
+                            &::placeholder{
+                                color: #AEB0BD;
+                            }
+                        }
+                        
+                            
+                    }
+                    .statusDropDown{
+
+                            
+                        
+                    
+                            .dropdownToggle{
+                                width: 90px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding: 2px 5px;
+                                border: none;
+                                background: #ceecf1;
+                                color: #2BB5C1;
+                                border-radius: 5px;
+                                font-size: 14px;
+                            }
+                            .dropdownMenu{
+                                padding: 0;
+                                margin: 0;
+                                .dropdownMenuItem{
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                    font-size: 13px;
+                                    // padding: 0;
+                                    margin: 0;
+                                    border-bottom: 1px solid #eee;
+                                    // cursor: pointer;
+                                    
+                                }
+                            }
+                        
+                        
+                    }
+                }
+            }
+            .messageContainer{
+                height:calc(100vh - 194px);
+                margin-left: 20px;
+                overflow: auto;
+               
+                    
+                        
+                
+                    .queriesListContiner{                    
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 15px 0 15px 10px;
+                        border-top-right-radius: 40px;
+                        border-bottom-right-radius: 40px;
+                        cursor: pointer;
+                        margin-left: 20px;
+                        margin-right: 20px;
+                        position: relative;
+                            
+                        &.active{
+                            background: #FAFDFF;
+                            border-radius: 0;
+                            border-top-left-radius: 40px;
+                            border-bottom-left-radius: 40px;
+                            
+                        }
+                        
+
+                            .userStataus{
+                                position: absolute;
+                                width: 5px;
+                                height: 5px;
+                                background: #47D384;
+                                left: -14px;
+                                border-radius: 50%;
+                            }
+// 
+                        // }
+                            .queriesListContinerUser{
+                                display: flex;
+                                gap: 10px;
+                                align-items: center;
+                            
+                                .queryUser{
+                                    
+                                    .userFirstLetter{
+                                        width: 35px;
+                                        height: 35px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border-radius: 10px;
+                                        font-size: 18px;
+                                        font-weight: 500;
+                                    }
+                                }
+                                .queryUserDetails{
+                                    // border: 1px solid yellow;
+                                    div{
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 10px;
+                                        .userName{
+                                            color: #9097A0;
+                                            font-size: 13px;
+                                            font-weight: 500;
+
+                                        }
+                                        .channelLabel{
+                                            width: 45px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            font-size: 13px;
+                                            font-weight: 500;
+                                            color: #fff;
+                                            background: #32BECA;
+                                            border-radius: 5px;
+                                        }
+                                    }
+                                    .userLastMessage{
+                                        width: 200px;
+
+                                        
+
+                                        span{
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            display: -webkit-box;
+                                            -webkit-line-clamp: 1; /* Adjust the number of lines to show */
+                                            -webkit-box-orient: vertical;
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                            .queryUseruserTime{
+                                div{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    span{
+                                        font-size: 13px;
+                                    }
+                                }
+                            }   
+
+                        }
+                    
+                // }
+               
+                
+            }
+        }
+        .conversationRight{
+            
+            left: 27rem;
+            position: absolute;
+            width: 54rem;
+            min-height: calc(100vh - 50px);
+            padding: 0 10px;
+            z-index: 999;
+            background: #FAFDFF;
+
+            &.conTemp{
+                background: #FAFDFF;
+            }
+            
+
+            .multiCon{
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                height: calc(100vh - 50px);
+                overflow-y: auto;
+                position: relative;
+                .multiConList{
+                    padding: 5px;
+                
+                    display: flex;
+                    gap: 10px;
+
+                    border: 1px solid #EEEEEE;
+                    border-radius: 10px;
+
+                    width: 400px;
+                    height: 420px;
+
+                    // .svgConversationMain{
+                    //     min-height: calc(100vh - 70px);
+                    //     display: flex;
+                    //     flex-direction: column;
+                    //     align-items: center;
+                    //     justify-content: center;
+                    //     // z-index: 10000;
+                        
+
+                    //     .newConText{
+                    //         display: flex;
+                    //         flex-direction: column;
+                    //         align-items: center;
+                    //         margin: 10px 0;
+                    //         color: '#0D3A4F';
+                    //         font-size: 20px;
+                    //         font-weight: 600;
+                    //     }
+                    //     .newCon{
+                    //         button{
+                    //             @include addBtn;
+
+                    //         }
+                    //     }
+                    // }
+                
+                    .listItems{
+                        width: 100%;
+                        
+                        
+                        .conTemplateContainer{
+                            // display: flex;
+                            // flex-direction: column;
+                            // gap: 10px;
+                           
+                            .conTemplateTop{
+                                display: flex;  
+                                justify-content: space-between;
+                                align-items: center;
+                                border-bottom: 1px solid #F2F2F9;
+                                
+                                padding: 0 10px 0 5px;
+                                .templateTopLeft{
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                    padding: 10px 5px;
+
+                                    .firstLetter{
+                                        width: 30px;
+                                        height: 30px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border-radius: 10px;
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                        
+                                    }
+
+                                    
+
+                                        .topLeftUserName{
+                                            font-size: 14px;
+                                            font-weight: 500;
+                                            color: #5C6169;
+                                        }
+
+                                    
+                                }
+                                .multiIcons{
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+
+                                    span{
+                                        cursor: pointer;
+                                        height: 30px;
+                                        width: 30px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        font-size: 14px;
+                                        border-radius: 10px;
+                                        background: #32BECA;
+                                        color: #fff;
+                                    }
+                                }
+
+                            //     .templateTopRight{
+
+                            //         .topRight{
+                            //             display: flex;
+                            //             align-items: center;
+                            //             gap: 10px;
+                            //             span{
+                            //                 height: 25px;
+                            //                 width: 25px;
+                            //                 display: flex;
+                            //                 align-items: center;
+                            //                 justify-content: center;
+                            //                 background: #D0EEF1;
+                            //                 color: #32BECA;
+                            //                 font-size: 14px;
+                            //                 border-radius: 10px;
+                            //                 font-weight: 600;
+                            //                 cursor: pointer;
+
+                            //             }
+                            //         }
+                            //     }
+                            }
+                            .messagesContianer{
+                                // padding-right: 5px;
+                                height: 300px;
+                                overflow-y: auto;
+                                // border: 1px solid black;
+                                .recMessage{
+                                    margin: 15px 0;
+                                    .messageContainer{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        gap: 10px;
+                                        .user{
+
+                                            .userFirstLetter{
+                                                width: 30px;
+                                                height: 30px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                border-radius: 10px;
+                                                font-size: 16px;
+                                                font-weight: 500;
+                                            }
+
+                                            span{
+
+                                            }
+                                        }
+                                        .userMessage{
+                                            display: flex;
+                                            flex-direction: column;
+                                            background: #F5F7FB;
+                                            padding: 5px 10px;
+                                            border-top-right-radius: 10px;
+                                            border-bottom-right-radius: 10px;
+                                            border-bottom-left-radius: 10px;
+                                            max-width: 700px ;
+                                            min-width: 250px;
+                                            .messageText{
+                                                color: #5C6169;
+                                                word-wrap: break-word;
+                                                font-size: 13px;
+                                            }
+                                            .messageTime{
+                                                display: flex;
+                                                justify-content: flex-end;
+                                                color: #A0A9B6;
+                                                font-size: 12px;
+                                            }
+                                        }
+
+                                    }
+                                }
+
+                                .sendMessages{
+                                    margin: 15px 0;
+                                    .messageContainer{
+                                        display: flex;
+                                        flex-direction: row-reverse;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        gap: 10px;
+                                        .user{
+
+                                            .userFirstLetter{
+                                                width: 30px;
+                                                height: 30px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                border-radius: 10px;
+                                                font-size: 16px;
+                                                font-weight: 500;
+                                            }
+                                            span{
+
+                                            }
+                                        }
+                                        .userMessage{
+                                            display: flex;
+                                            flex-direction: column;
+                                            background: #DDF9FC;
+                                            padding: 5px 10px;
+                                            border-top-left-radius: 10px;
+                                            border-bottom-right-radius: 10px;
+                                            border-bottom-left-radius: 10px;
+                                            //  max-width: 700px ;
+                                            // min-width: 250px;
+                                            
+                                            .messageText{
+                                                color: #32BECA;
+                                                word-wrap: break-word;
+                                                font-size: 13px;
+                                            }
+                                            .messageTime{
+                                                display: flex;
+                                                justify-content: flex-end;
+                                                color: #A0A9B6;
+                                                font-size: 12px;
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+
+                            .sendMessageContianer{
+                                position: relative;
+                                margin-top: 5px;
+                                
+                                form{ 
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 20px;
+                                    .inputContainer{
+                                        flex: 1;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        gap: 5px;
+                                        border: 1px solid #DBDEE4;
+                                        border-radius: 10px;
+                                        background: white;
+                                        padding: 0 10px;
+
+                                        input{
+                                            width: 85%;
+                                            border: none;
+                                            outline: none;
+                                            margin: 10px;
+                                        }
+                                        .inputIcons{
+                                            color: #BDBFC4;
+                                            font-size: 17px;
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 5px;
+
+                                            span{
+                                                cursor: pointer;
+                                            }
+
+                                    .multiQuickResponseContainer{
+                                        position: absolute;
+                                        color: #000;
+                                        bottom: 50px;
+                                        right: 20px;
+                                        font-size: 15px;
+                                        width: 300px;
+                                        height: 300px;
+                                        z-index: 2;
+                                        background: #FFFFFF;
+                                        border-radius: 10px;
+                                        border: 1px solid gray;
+                                
+                                        .Maincontainer{
+
+
+                                            .responseTop{
+
+                                                border-bottom: 1px solid #DBDEE4;
+
+                                                .crossIcon{
+                                                    height: 20px;
+                                                    width: 20px;
+                                                    background: #EEEEEE;
+                                                    color: #9097a0;
+                                                    border-radius: 50%;
+                                                    font-size: 12px;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                }
+                                            }
+                                        .quickResponseTextArea{
+                                            .textArea{
+                                                
+                                                
+                                                margin: 0 10px;
+                                                border: 1px solid #E5E8EE !important;
+                                                border-radius: 15px;
+                                                input{
+                                                    width: 95%;
+                                                    background: transparent;
+                                                    outline: none;
+                                                }
+                                            }
+                                        }
+                                        .quickResponseList{
+                                            display: flex;
+                                            flex-direction: column;
+                                            gap: 10px;
+                                            height: 210px;
+                                            overflow-y: scroll;
+                                            padding: 10px;
+
+                                            &.customHeight{
+                                                height: 155px;
+                                            }
+
+                                            .responseList{
+                                                border-bottom: 1px solid #AEB0BD;
+                                            
+                                                .truncatedText {
+                                                    overflow: hidden;
+                                                    text-overflow: ellipsis;
+                                                    white-space: nowrap;
+                                                    flex: 1;
+
+
+                                                }
+                                                .icons{
+
+                                                    span{
+                                                        font-size: 13px;
+                                                    
+                                                    }
+                                                    .editIcon{
+                                                        color: #65CF98;
+                                                    }
+                                                    .deleteIcon{
+                                                        color: #E85D7B;
+                                                    }
+                                                    
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    
+                                
+                    
+
+                                            }
+                                        }
+
+                                    }
+                                    .sendMessageIcon{
+                                        flex: .1;
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 10px;
+                                        font-size: 20px;
+                                        .sendIcon{
+                                            background: #D2F0F4;
+                                            color: #59B6C1;
+                                            width: 40px;
+                                            height: 40px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            border-radius: 10px;
+                                        }
+                                        .checkIcon{
+                                            color: #59B6C1;
+                                            width: 40px;
+                                            height: 40px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            border: 2px solid #59B6C1;
+                                            border-radius: 10px;
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                        // .detailsActive{
+                        //     width: 30rem;
+                        // }
+                        // .detailsInactive{
+                        //     width: 52rem;
+                        // }
+                    }
+                }
+            }
+            
+                
+        }
+        .trashAllOpenChat {
+            position: absolute;
+            top: 30%;
+            right: 0;
+            overflow: hidden;
+            .trashAllOpenChatContainer {
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #32BECA;
+                cursor: pointer;
+                overflow: hidden; /* Hide the text when not hovered */
+                transition: width 0.3s ease, background 0.3s ease; /* Add transitions for smooth animation */
+
+                &:hover {
+                    width: 100px;
+
+                    
+                }
+
+                .deleteIcon {
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #fff;
+                    border-radius: 50%;
+                    color: #32BECA;
+                    transition: display 0.3s ease; /* Add transition for icon display */
+
+                    &:hover{
+                        color: red;
+                    }
+                }
+                
+    }
+    }
+
+
+        
+    
+
+    
+
+ 
+}
+
+.messageContainer::-webkit-scrollbar{
+
+    width: 0 !important;
+
+}
+.messageContainer::-webkit-scrollbar-track{
+
+    // width: 0 !important;
+
+}
+.multiCon::-webkit-scrollbar{
+
+    width: 0 !important;
+
+}
+
+
+
+.messageContainer::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 3px;
+    // height: 10px;
+
+}
+.messagesContianer::-webkit-scrollbar{
+    display: block;
+    width: 5px;
+    height: 5px;
+}
+                    
+                    
+                    
+                    .messagesContianer::-webkit-scrollbar-thumb{
+                        background-color: #888;
+                        border-radius: 20px;
+                        // height: 10px;
+
+                    }
+                    
+                    
+.testActive {
+    background-color: #FAFDFF;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+
+}
+
+
+
+
+.checkCss{
+    // border: 1px solid black;
+}
+
+.above-active{
+    border-top-right-radius: 40px;
+    // border: 1px solid black;
+    box-shadow: 30px 0 0 0 #FAFDFF
+}
+.below-active{
+    border-bottom-right-radius: 40px;
+    box-shadow: 30px 0 0 0 #FAFDFF
+}

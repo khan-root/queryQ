@@ -1,0 +1,106 @@
+
+.mainChannels{
+    margin-top: 50px;
+    margin-left: 5px;
+    height: calc(100vh - 50px);
+    width: calc(100vw - 70px);
+    .channelMain{
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .channelTop{
+            background: #F8F9FF;
+            padding: 5px 20px;
+            border-radius: 10px;
+            width: 70%;
+            span{
+                color: #5C6169;
+                font-size: 14px;
+            }
+        }
+        .channelConetnt{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .channelsIcons{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                div{
+
+                
+                    position: relative;
+                .channelIcon{
+                    border: 1px solid #32BECA;
+                    border-radius: 10px;
+                    width: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 20px;
+                    height: 50px;
+                    cursor: pointer;
+                    color: #32BECA;
+                }
+                .activeChannelIcon{
+                    background: #32BECA;
+                    color: #fff;
+                }
+                .badge{
+                    position: absolute;
+                    top: -2px;
+                    right: -3px;
+                    background-color: #F65F7C;
+                    color: white;
+                    border-radius: 50%;
+                    font-size: 11px;
+                    width: 17px;
+                    height: 17px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                }
+                }
+            }
+
+            .channels{
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .channelsTop{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    span{
+                        // @include addBtn;
+                        padding: 3px 8px;
+                        font-size: 13px;
+                    }
+                }
+                .channelsList{
+                    border: 1px solid #E5E5E5;
+                    border-radius: 10px;
+                    
+                    .channelsListTop{
+                        padding: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: #474747;
+                        font-size: 16px;
+                        font-weight: 500;
+                        border-bottom: 1px solid #F2F2F9;
+                    }
+
+                    .channelsListBottom{
+
+                    }
+                }
+            }
+        }
+    }
+}

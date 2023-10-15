@@ -1,0 +1,1420 @@
+.mainCanvas{
+    // border-bottom-left-radius: 20px;
+    // border-top-left-radius: 20px;
+    transition: transform .4s ease-in-out;
+    .canvasHeader{
+        border-bottom: 1px solid #F1F1F1;
+        .canvasTitle{
+            font-size: 16px;
+            font-weight: 600;
+            color: #153947;
+        }
+    }
+    .canvasBody{
+        .newTeamContianer{
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: space-between;
+            // border: 1px solid red;
+            // height: calc(100vh - 90px);
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .teamTitle{
+
+                }
+
+                .teamInput{
+                    border: 1px solid #DCDCDC;
+                    padding: 5px 10px;
+                    border-radius: 10px;
+
+                    input{
+                        width: 100%;
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                    }
+                }
+
+                .addTeamBtn{
+                    button{
+                        // @include addBtn;
+                    }
+                }
+            }
+        }
+
+        .addGroup{
+                form{
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .groupChannel{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        .groupChannelTitle{
+                            span{
+                                font-size: 14px;
+                                font-weight: 500;
+                                color: #153947;
+                            }
+                        }
+                        .channelsIcons{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            div{
+
+                            
+
+                            .channelIcon{
+                                border: 1px solid #32BECA;
+                                border-radius: 10px;
+                                width: 30px;
+                                height: 30px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 16px;
+                                cursor: pointer;
+                                color: #32BECA;
+                            }
+                            .activeChannelIcon{
+                                background: #32BECA;
+                                color: #fff;
+                            }
+                                .disabledChannel{
+                                    cursor: not-allowed;   
+                                    opacity: 0.5;   
+                                }
+                            }
+                    
+                        }
+                    }
+
+                    .gorupContacts{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        .groupContactTitle{
+                            span{
+                                font-size: 14px;
+                                font-weight: 500;
+                                color: #153947;
+                            }
+                        }
+                        .groupContactSelect{
+                            
+                            .selectOption{
+                                padding: 0  3px 0 9px;
+                                display: flex;
+                                border: 1px solid;
+                                align-items: center;
+                                border-radius: 10px;
+                                border: 1px solid #DCDCDC;
+                                .selectContact{
+                                    width: 100%;
+                                }
+                            }
+                            .slectedOptions{
+                                padding: 10px 0;
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                flex-wrap: wrap;
+                                .selectedItem{
+                                    background: #2BB5C1;
+                                    display: flex;
+                                    color: #fff;
+                                    align-items: center;
+                                    gap: 10px;
+                                    border-radius: 20px;
+                                    padding: 3px 10px;
+                                    font-size: 13px;
+                                    
+
+                                    .selectRemIcon{
+                                        width: 15px;
+                                        height: 15px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        font-size: 8px;
+                                        border-radius: 50%;
+                                        background: #FF385C;
+                                        color: #fff;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                        .groupName{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            label{
+                                font-size: 14px;
+                                font-weight: 500;
+                                color: #153947;
+                            }
+                            input{
+                                border-radius: 10px;
+                                padding: 4px 10px;
+                                border: 1px solid #DCDCDC;
+                                outline: none;
+                            }
+                        }
+                        .addGroup{
+                            margin-top: 10px;
+                            display: flex;
+
+                            
+                        }
+                    }
+                }
+        }
+
+         .viewAssignmentCanvas{
+            padding: 10px 10px 0 10px;
+            .viewAssignmentHeader{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                // border: 1px solid black;
+                border-bottom: 1px dashed #EEEEEE;
+                gap: 20px 50px;
+                .list{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding-bottom: 10px;
+                    .listIcon{
+                            width: 40px;
+                            height: 40px;
+                            background: #32BECA;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 10px;
+                        span{
+                            color: white;
+                            font-size: 18px;
+                        }
+                    }
+                    .listDetail{
+                        display: flex;
+                        flex-direction: column;
+                        .title{
+                            color: #495057;
+                            font-weight: 600;
+                        }
+                        .desc{
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+            .filterbased{
+                margin: 1px 0;
+                .filterbasedHeader{
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+
+                    font-size: 17px;
+                    .icon{
+                        color: #32BECA;
+                    }
+                    .title{
+                        color: #495057;
+                    }
+                }
+                
+            }
+            .filterbasedContainer{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    // border: 1px solid black;
+                    border-bottom: 1px dashed #EEEEEE;
+                    gap: 10px 40px;
+                    padding: 5px 0;
+
+                    
+                    .filterbasedContainerDetail{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 10px;
+                        .listIcon{
+                            width: 40px;
+                            height: 40px;
+                            background: #32BECA;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 10px;
+                            span{
+                                color: white;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+
+        }
+
+        .addAssignmentCanvasContainer{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .label{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                input{
+                    border-radius: 10px;
+                    border: 1px solid #B3B3B3;
+                    outline: none;
+                    padding: 5px 20px;
+                    color: #495057;
+
+                    &::placeholder{
+                        color: #999,
+                    }
+
+                }
+            }
+
+            
+            
+        }
+
+        .ManageGroupContainer{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .selectOption{
+                display: flex;
+                border: 1px solid gray;
+                align-items: center;
+                padding: 0 10px;
+                border-radius: 20px;
+                .selectContact{
+                    width: 100%;
+                    margin-right: 5px;
+                }
+            }
+
+            
+            .slectedOptions{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    flex-wrap: wrap;
+                    .selectedItem{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        background: #E6F7FA;
+                        padding: 3px 5px;
+                        border-radius: 20px;
+                        
+                        .selectedName{
+                            color: #2BB5C1;
+                            cursor: pointer;
+                            font-size: 12px;
+                        }
+                        .selectRemIcon{
+                            height: 12px;
+                            width: 12px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 10px;
+                            background: #FF385C;
+                            color: #E6F7FA;
+                            border-radius: 10px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+        
+            .contactContainer{
+                display: flex;
+                flex-direction: column;
+                .contactContainerHeader{
+                    background: #32BECA;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #fff;
+                    padding: 10px 15px;
+                    border-top-right-radius: 10px;
+                    border-top-left-radius: 10px;
+                }
+                
+                
+                
+                .contactSelecting{
+                    color: #495057;
+                    font-size: 14px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px 5px;
+                    border-right: 1px solid #EEEEEE;
+                    border-left: 1px solid #EEEEEE;
+                    
+                    // .user{
+                    //     div{
+
+                    //         display: flex;
+                    //         flex-direction: row;
+                    //         align-items: center;
+                    //         gap: 10px;
+                    //     }
+
+
+                    // }
+                }
+                    // .actions{
+                    //     display: flex;
+                    //     align-items: center;
+                    //     gap: 5px;
+
+                    //     .update{
+                    //         background: #B8FFD4;
+                    //         color: #47D384;
+                    //         padding: 2px 5px;
+                    //         border-radius: 5px;
+                    //     }
+                    //     .delete{
+                    //         color: #FF385C;
+                    //         border-radius: 5px;
+                    //         background-color: #FAD4DE;
+                    //         padding: 2px 5px;
+
+                    //     }
+                    // }
+                
+            }
+            .userContactLists{
+                display: flex;
+                flex-direction: column;
+                // gap: 10px;
+                // padding: 10px 15px;
+                border-right: 1px solid #EEEEEE;
+                border-left: 1px solid #EEEEEE;
+                .userContactList{
+                   display: flex;
+                   align-items: center;
+                   justify-content: space-between; 
+                   padding: 5px 5px;
+                   
+
+                    .user{
+                        
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        flex: 1;
+                        .selectUser{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                        }
+                    }
+                    .contactNumber{
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .deleteActions{
+                        flex: 1;
+                        display: flex;
+                        justify-content: flex-end;
+                        .deleteIcon{
+                            padding: 5px;
+                            background: #FAD4DE;
+                            color: #E63259;
+                            font-size: 13px;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .even{
+                background: #FCFCFC;
+            }
+            .odd{
+                background: #EEEEEE;
+            }
+
+            .noData{
+                display: flex;
+                /* border: 1px solid black; */
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+
+                span{
+                    font-size: 16px;
+                    color: #0D3A4F;
+                    font-weight: 600;
+                }
+            }
+        }
+        .NewCampaignformContainer{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            
+            .formInput{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                
+                label{
+                    font-weight: 500;
+                }
+                
+                input{
+                    border-radius: 10px;
+                    outline: none;
+                    padding: 2px 10px;
+                    border: 1px solid #DCDCDC;
+
+                    &::placeholder{
+                        font-size: 12px;
+                    }
+                    
+                }
+            }
+            .formSelect{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                label{
+                    font-weight: 500;
+                }
+                select{
+                    border: 1px solid #DCDCDC;
+                    border-radius: 10px;
+                    padding: 2px 10px;
+                    outline: none;
+                    font-size: 13px;
+                    option{
+                        color: #A7A7A7;
+                    }
+                }
+
+            }
+            .formButton{
+                display: flex;
+                // align-self: flex-end;
+                button{
+                    
+                    padding: 3px 15px;
+                    font-size: 12;
+                }
+            }
+        }
+
+        .newBroadcastContainer{
+            display: flex;
+            gap: 10px;
+            .left{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                label{
+                    font-size: 13px;
+                    font-weight: 500;
+                    color:#5C6169;
+                }
+                select{
+                    border: 1px solid #DCDCDC;
+                    border-radius: 10px;
+                    outline: none;
+                    padding: 4px 10px;
+                    font-size: 13px;
+                    color: #BEBEBE;
+                    option{
+                        font-size: 13px;
+                        
+                    }
+                }
+                input{ 
+                    border: 1px solid #DCDCDC;
+                    border-radius: 10px;
+                    outline: none;
+                    padding: 4px 10px;
+                    font-size: 13px;
+
+                }
+                .selectInbox{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                }
+                .selectChannel{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+                    .channelList{
+                        display: flex;
+                        gap: 10px;
+                        .channelIcon{
+                            border: 1px solid #32BECA;
+                            border-radius: 5px;
+                            width: 35px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 15px;
+                            height: 35px;
+                            cursor: pointer;
+                            color: #32BECA;
+                        }
+                        .activeChannelIcon{
+                            background: #32BECA;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .searchName{
+                    padding: 0 10px;
+                    border: 1px solid #DCDCDC;
+                    display: flex;
+                    align-items: center;
+                    gap: 2px;
+                    border-radius: 10px;
+
+                    input{
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                    }
+                }
+                .broadcastName{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    
+                }
+                .groups{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    .groupContainer{
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid #DCDCDC;
+                        border-radius: 20px;
+                        padding: 0 10px;
+                        gap: 2px;
+                        input{
+                            width: 100%;
+                            border: none;
+                            outline: none;
+                        }
+                        
+                    }
+                    .allGroups{
+                        padding: 10px;
+                        div{
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                        }
+                    }
+                }
+                .selectedGroup{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    flex-wrap: wrap;
+                    div{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        background: #E6F7FA;
+                        padding: 3px 5px;
+                        border-radius: 10px;
+                        
+                        .groupName{
+                            color: #2BB5C1;
+                            cursor: pointer;
+                        }
+                        .groupRemIcon{
+                            height: 12px;
+                            width: 12px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 10px;
+                            background: #FF385C;
+                            color: #E6F7FA;
+                            border-radius: 10px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .groupMember{
+                    .groupName{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        background: #E6F7FA;
+                        padding: 0 5px;
+                        font-size: 14px;
+                        .groupTitle{
+                            color: #2BB5C1;
+                        }
+                        .groupRemIcon{
+                            background: #FF385C;
+                            color: #E6F7FA;
+                            height: 12px;
+                            width: 12px;
+                            font-size: 10px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+
+                        }
+                    }
+                    .groupData{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        background: #32BECA;
+                        color: #fff;
+                        font-size: 13px;
+                        padding: 0 5px;
+                    }
+                    .groupAllMember{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 5px;
+                        background: #E6F7FA;
+                        font-size: 12px;
+
+                        .member{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            img{
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                            }
+                        }
+                        .memberContact{
+
+                        }
+                    }
+                    .groupAllMemberEven{
+                        background: #F3FDFF;
+                    }
+                }
+                .messageTemplate{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                }
+                .broadcastLabel{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .label{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                }
+            }
+            .right{
+                flex: .7;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .templateTitle{
+                    span{
+                        font-size: 13px;
+                        font-weight: 500;
+                        color:#5C6169;
+                    }
+                }
+                .templateView{
+                    border: 1px solid #EEEEEE;
+                    border-radius: 10px;
+                    padding: 10px;
+                    color: #474747;
+                    min-height: 70px;
+                    span{
+                        color: #474747;
+                        font-size: 14px;
+                    }
+                }
+                .sendMessageBtn{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    button{
+                        
+                        padding: 3px 8px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        .newConversationContainer{
+            display: flex;
+            gap: 10px;
+            .left{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                label{
+                    font-size: 13px;
+                    font-weight: 500;
+                    color:#5C6169;
+                }
+                select{
+                    border: 1px solid #DCDCDC;
+                    border-radius: 10px;
+                    outline: none;
+                    padding: 4px 10px;
+                    font-size: 13px;
+                    color: #BEBEBE;
+                    option{
+                        font-size: 13px;
+                        
+                    }
+                }
+                input{ 
+                    border: 1px solid #DCDCDC;
+                    border-radius: 10px;
+                    outline: none;
+                    padding: 4px 10px;
+                    font-size: 13px;
+
+                }
+                .selectInbox{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                }
+                .selectChannel{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+                    .channelList{
+                        display: flex;
+                        gap: 10px;
+                        .channelIcon{
+                            border: 1px solid #32BECA;
+                            border-radius: 5px;
+                            width: 35px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 15px;
+                            height: 35px;
+                            cursor: pointer;
+                            color: #32BECA;
+                        }
+                        .activeChannelIcon{
+                            background: #32BECA;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .searchName{
+                    padding: 0 10px;
+                    border: 1px solid #DCDCDC;
+                    display: flex;
+                    align-items: center;
+                    gap: 2px;
+                    border-radius: 10px;
+
+                    input{
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                    }
+                }
+                .broadcastName{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    
+                }
+                .selectedContact{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        background: #E6F7FA;
+                        padding: 4px 6px;
+                        border-radius: 15px;
+                        width: fit-content;
+                        
+                        .contactName{
+                            color: #2BB5C1;
+                            cursor: pointer;
+                        }
+                        .contactRemove{
+                            height: 12px;
+                            width: 12px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 10px;
+                            background: #FF385C;
+                            color: #E6F7FA;
+                            border-radius: 10px;
+                            cursor: pointer;
+                        }
+                }
+                .groups{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    .groupContainer{
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid #DCDCDC;
+                        border-radius: 20px;
+                        padding: 0 10px;
+                        gap: 2px;
+                        input{
+                            width: 100%;
+                            border: none;
+                            outline: none;
+                        }
+                        
+                    }
+                    .allGroups{
+                        border: 1px solid red;
+                        padding: 10px;
+                    }
+                }
+                .selectedGroup{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    flex-wrap: wrap;
+                    div{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        background: #E6F7FA;
+                        padding: 3px 5px;
+                        border-radius: 10px;
+                        
+                        .groupName{
+                            color: #2BB5C1;
+                            cursor: pointer;
+                        }
+                        .groupRemIcon{
+                            height: 12px;
+                            width: 12px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 10px;
+                            background: #FF385C;
+                            color: #E6F7FA;
+                            border-radius: 10px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .groupMember{
+                    .groupName{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        background: #E6F7FA;
+                        padding: 0 5px;
+                        font-size: 14px;
+                        .groupTitle{
+                            color: #2BB5C1;
+                        }
+                        .groupRemIcon{
+                            background: #FF385C;
+                            color: #E6F7FA;
+                            height: 12px;
+                            width: 12px;
+                            font-size: 10px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+
+                        }
+                    }
+                    .groupData{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        background: #32BECA;
+                        color: #fff;
+                        font-size: 13px;
+                        padding: 0 5px;
+                    }
+                    .groupAllMember{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 5px;
+                        background: #E6F7FA;
+                        font-size: 12px;
+
+                        .member{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            img{
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                            }
+                        }
+                        .memberContact{
+
+                        }
+                    }
+                    .groupAllMemberEven{
+                        background: #F3FDFF;
+                    }
+                }
+                .messageTemplate{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                }
+                .broadcastLabel{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .label{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                }
+            }
+            .right{
+                flex: .7;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .templateTitle{
+                    span{
+                        font-size: 13px;
+                        font-weight: 500;
+                        color:#5C6169;
+                    }
+                }
+                .templateView{
+                    border: 1px solid #EEEEEE;
+                    border-radius: 10px;
+                    padding: 10px;
+                    color: #474747;
+                    min-height: 70px;
+                    span{
+                        color: #474747;
+                        font-size: 14px;
+                    }
+                }
+                .sendMessageBtn{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    button{
+                        
+                        padding: 3px 8px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+
+        .addNewUserForm{
+            padding: 0;
+            margin: 0;
+
+            form{
+                label{
+                    color: #153947;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+
+                span{
+                    color: red;
+                }
+                .inputField{
+                    padding: 5px 10px;
+                    border-radius: 15px;
+                    border: 1px solid #DCDCDC;
+                    
+
+                    input{
+                        width: 100%;
+                        border: none;
+                        outline: none;
+
+                        &::placeholder{
+                            color: #DCDCDC;
+                        }
+                    }
+                }
+                .selectField{
+                    padding: 5px 10px;
+                    border-radius: 15px;
+                    border: 1px solid #DCDCDC;
+                    
+
+                    select{
+                        width: 100%;
+                        border: none;
+                        outline: none;
+
+                        &::placeholder{
+                            color: #DCDCDC;
+                        }
+                    }
+                }
+                .selectCountry{
+                    // padding: 0 14px;
+                    border: 1px solid #DCDCDC;
+                    border-radius: 15px;
+
+                    .selectCountryInner{
+                        padding: 0 12px;
+                    }
+                }
+            }
+        }
+
+        .contactGroupContainer{
+
+
+            .tableHeader{
+                th{
+
+                    background: #32BECA !important;
+                    color: #fff !important;
+                    font-weight: 400;
+                }
+
+                
+            }
+            .userNameImg{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+
+        // .filterForm{
+        //     select{
+        //         padding: 8px 16px;
+        //         font-size: 14px;
+        //         border-radius: 11px;
+        //         /* border: 1px solid red; */
+        //         border: 1px solid #B3B3B3;
+        //         color: #495057;
+        //     }
+        // }
+
+        .labelsContainer{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .labelHeader{
+                span{
+                    font-size: 14px;
+                    color: #153947;
+                }
+            }
+            .labelsForm{
+                position: relative;
+                form{
+                    .formContianer{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        .colorChoose{
+                            .showColor{
+                                cursor: pointer;
+                                
+                                .openColor{
+                                    transform: rotate(0);
+                                    transition: transform .5s ease;
+                                } 
+                                .closeColor{
+                                    transform: rotate(-90deg);
+                                    transition: transform .5s ease;
+                                    
+                                }
+                            } 
+                        
+                        }
+                        .labelInput{
+                            
+                            input{
+                                width: 250px;
+                                border: none;
+                                padding: 0 5px;
+                                border: 1px solid #ddd;
+                                padding: 5px 10px;
+                                border-radius: 10px;
+                                outline: none;
+                                font-size: 13px;
+
+                                &::placeholder{
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                        .submitContianer{
+
+                            .updateIcons{
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                font-size: 17px;
+
+                                .updateIcon{
+                                    color: #55CD6C;
+                                    cursor: pointer;
+                                }
+                                .discardIcon{
+                                    color: #F65F7C;
+                                    cursor: pointer;
+
+                                }
+                            
+                            }
+                        }
+                    }
+                    .colorPicker{
+                        position: absolute;
+                    }
+                }
+            }
+            .labelsListsContainer{
+                
+                .labelsLists{
+
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    
+                    .labelsList{
+                        
+                        display: flex;
+                        
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .label{
+                            display: flex;
+                            align-items: center;
+                            gap: 30px;
+
+                            .color{
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 50%;
+
+                            }
+                            
+                            .labelName{
+                                span{
+
+                                    font-size: 14px;
+                                    color: #153947;
+                                }
+                            }
+                        }
+                        .labelIcons{
+
+                            .icons{
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                font-size: 17px;
+
+                                .editIcon{
+                                    color: #55CD6C;
+                                    cursor: pointer;
+                                }
+                                .deleteIcon{
+                                    color: #F65F7C;
+                                    cursor: pointer;
+
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+        .addContactForm{
+            .contactContainer{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .inputSection{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    
+                    input{
+                        border: 1px solid #DCDCDC;
+                        border-radius: 10px;
+                        padding: 9px 10px;
+                        // padding: 4px 10px;
+                        color: #0D3A4F;
+                        outline: none;
+                        font-size: 13px;
+                        &::placeholder{
+                            font-size: 13px;
+                            color: #BEBEBE;
+                        }
+                    }
+                }
+
+                .ContactNumberContainer{
+                    display: flex;
+                    align-items: center;
+                    border: 1px solid #DCDCDC;
+                    border-radius: 10px;
+                    padding: 0 10px;
+
+                    .countrySelect{
+                        flex: .5;
+
+                    }
+                    .number{
+                        flex: 2;
+                        border-left: 1px solid #DCDCDC;
+                        
+                        padding: 6px;
+
+                        input{
+                            border: none;
+                            outline: none;
+                            width: 100%;
+                            color: #0D3A4F;
+                            outline: none;
+                            font-size: 13px;
+                            &::placeholder{
+                                font-size: 13px;
+                                color: #BEBEBE;
+                            }
+                        }
+                    }
+                }
+               
+            }
+            .emailContainer{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .inputSection{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    input{
+                        border: 1px solid #DCDCDC;
+                        border-radius: 10px;
+                        padding: 4px 10px;
+                        color: #0D3A4F;
+                        outline: none;
+                        font-size: 13px;
+                        &::placeholder{
+                            font-size: 13px;
+                            color: #BEBEBE;
+                        }
+                    }
+                }
+               
+            }
+            
+        }
+
+        .updateContactForm{
+            
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+
+                label{
+                    color: #153947;
+                    font-weight: 500;
+                }
+
+                input{
+
+                    border: 1px solid #DCDCDC;
+                    border-radius: 10px;
+                    padding: 5px;
+                    outline: none;
+                    font-size: 14px;
+
+                    
+                }
+
+                .name{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3px;
+                }
+                
+                .contactNumber{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3px;
+                    
+                }
+            }
+        }
+
+    }
+}

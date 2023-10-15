@@ -1,0 +1,33 @@
+.confirmModalMain{
+    width: 330px;
+
+    .confirmModalHeader{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .confirmModalTitle{
+            font-size: 17px; 
+        }
+        
+    }
+    
+    .confirmModalBody{
+        padding: 15px 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .confirmModalBodyButtons{
+            button{
+                border: none;
+                padding: 3px 10px;
+                background: #32BECA;
+                color: #fff;
+                font-size: 14px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+}

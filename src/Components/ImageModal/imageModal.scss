@@ -1,0 +1,30 @@
+
+// .customModalStyle{
+//     position: absolute;
+//     bottom: 25px;
+//     right: 0;
+//     left: 175px;
+    
+// }
+.modalbackdrop{
+    background: transparent;
+}
+
+.filebody{
+    padding: 0;
+    img{
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+    video{
+        height: 200px;
+        width: 100%;
+        
+    }
+    .pdfFiles{
+        height: 200px;
+        width: 100%;
+
+    }
+}

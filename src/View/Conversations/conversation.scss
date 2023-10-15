@@ -1,0 +1,1251 @@
+.mainConversation{
+    margin-top: 45px;
+    .conversationQuries{
+        position: relative;
+        width: 100%;
+
+        .emptyConversation{
+            width: calc(100vw - 70px);
+            height: calc(100vh - 50px) !important;
+            margin-top: 50px;
+            margin-left: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .conversationQueriesContainer{
+            
+            position: fixed;      
+            width: 26rem;
+            height: calc(100vh - 45px) !important;
+            
+            background: #F5F7FB;
+            .conversationQueriesContainerTop{
+                padding: 10px 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .topIconTitle{
+
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    .icon{
+                        font-size: 19px;
+                        color: #32BECA;
+                        margin-bottom: 3px;
+
+                    }
+                    .title{
+                        font-size: 17px;
+                        font-weight: 600;
+                        color: #232336;
+                    }
+                }
+                .newConBtn{
+                    border: none;
+                    background: #CEECF1;
+                    color: #32BECA;
+                    padding: 2px 5px;
+                    border-radius: 5px;
+                    font-size: 13px;
+                    
+                    &:hover{
+                        color: #CEECF1;
+                        background: #32BECA;
+                        
+                    }
+                }
+            }
+
+            .conversationQueriesheader{
+                padding: 10px 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                .headerAssignedBtn{
+                    display: flex;
+                    align-items: center;
+                    gap: 30px;
+                    cursor: pointer;
+
+                  
+                    .assignedBtnList {
+                        position: relative;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: #a0a9b6;
+
+                        &::after {
+                            content: '';
+                            width: 100%;
+                            height: 4px;
+                            background: #32beca;
+                            position: absolute;
+                            bottom: -4px;
+                            left: 0;
+                            border-radius: 20px;
+                            transform: scaleX(0);
+                            transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+                            transform-origin: right center;
+                        }
+
+                        &:hover::after {
+                            transform: scaleX(1);
+                            transform-origin: left center;
+                            transition-duration: 0.4s;
+                        }
+
+                        &.active {
+                            color: #5c6169;
+                        }
+
+                        &.active::after {
+                            transform: scaleX(1);
+                            transform-origin: left center;
+                            transition-duration: 0.4s;
+                        }
+                    }
+                }
+
+                .queriesSearch{
+
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    .searchIconInput{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        padding-left: 10px;
+                        border: 2px solid #E5E8EE;
+                        border-radius: 10px;
+                        span{
+                            color: #AEB0BD;
+                        }
+                        input{
+                            border: none;
+                            background: transparent;
+                            outline: none;
+
+                            &::placeholder{
+                                color: #AEB0BD;
+                            }
+                        }
+                        
+                            
+                    }
+                    .statusDropDown{
+                    
+                            .dropdownToggle{
+                                width: 90px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding: 2px 5px;
+                                border: none;
+                                background: #ceecf1;
+                                color: #2BB5C1;
+                                border-radius: 5px;
+                                font-size: 14px;
+                            }
+                            .dropdownMenu{
+                                padding: 0;
+                                margin: 0;
+                                min-width: 100px !important;
+                                .dropdownMenuItem{
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                    font-size: 13px;
+                                    // padding: 0;
+                                    margin: 0;
+                                    border-bottom: 1px solid #eee;
+                                    // cursor: pointer;
+                                    
+                                }
+                            }
+                        
+                        
+                    }
+                }
+            }
+            .messageContainer{
+                height:calc(100vh - 194px);
+                margin-left: 4px;
+
+                overflow: auto;
+               
+                    
+                        
+                
+                    .queriesListContiner{ 
+                        // border: 1px solid saddlebrown !important;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 15px 14px 15px 10px;
+                        border-top-right-radius: 40px;
+                        border-bottom-right-radius: 40px;
+                        cursor: pointer;
+                        margin-left: 20px;
+                        position: relative;
+
+                            
+                        &.active{
+                            background: #FAFDFF;
+                            border-radius: 0;
+                            border-top-left-radius: 40px;
+                            border-bottom-left-radius: 40px;
+                            
+                        }
+                        
+
+                            .userStataus{
+                                position: absolute;
+                                width: 5px;
+                                height: 5px;
+                                background: #47D384;
+                                left: -14px;
+                                border-radius: 50%;
+                            }
+                            .queriesListContinerUser{
+                                display: flex;
+                                gap: 10px;
+                                align-items: center;
+
+                                .unreadCount{
+                                    position: absolute;
+                                    top: 15px;
+                                    left: 3px;
+                                    // bottom: 0;
+                                    width: 20px;
+                                    height: 20px;
+
+                                    background: #FF022E;
+                                    color: #fff;
+                                    font-size: 11px;
+                                    border-radius: 100%;
+
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border: 2px solid white;
+
+                                    
+                                }
+                            
+                                .queryUser{
+                                    
+                                    .userFirstLetter{
+                                        width: 35px;
+                                        height: 35px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border-radius: 10px;
+                                        font-size: 18px;
+                                        font-weight: 500;
+                                    }
+                                }
+                                .queryUserDetails{
+                                    div{
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 10px;
+                                        .userName{
+                                            color: #9097A0;
+                                            font-size: 13px;
+                                            font-weight: 500;
+
+                                        }
+                                        .channelLabel{
+                                            width: 45px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            font-size: 13px;
+                                            font-weight: 500;
+                                            color: #fff;
+                                            background: #32BECA;
+                                            border-radius: 5px;
+                                        }
+                                    }
+                                    .userLastMessage{
+                                        width: 200px;
+
+                                        
+
+                                        span{
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            display: -webkit-box;
+                                            -webkit-line-clamp: 1; /* Adjust the number of lines to show */
+                                            -webkit-box-orient: vertical;
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                            .queryUseruserTime{
+                                div{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    span{
+                                        font-size: 13px;
+                                    }
+                                }
+                            }   
+
+                    }
+                    
+                // }
+               
+                
+            }
+        }
+        .conversationRight{
+            position: absolute;
+            left: 26rem;
+            top: 5px;
+            width: calc(100vw - 30.2rem);
+            height: calc(100vh - 50px);
+            &.conTemp{
+                background: #FAFDFF;
+            }
+            &.svgTemp{
+                background: #fff;
+            }
+
+            .conversation{
+                width: 100%;
+                display: flex;
+                gap: 5px;
+            }
+
+            // .svgConversationMain{
+            //     min-height: calc(100vh - 70px);
+            //     display: flex;
+            //     flex-direction: column;
+            //     align-items: center;
+            //     justify-content: center;
+                
+
+            //     .newConText{
+            //         display: flex;
+            //         flex-direction: column;
+            //         align-items: center;
+            //         margin: 10px 0;
+            //         color: '#0D3A4F';
+            //         font-size: 20px;
+            //         font-weight: 600;
+            //     }
+                
+            // }
+            
+
+            
+                .conTemplateContainer{
+                    width: 100%;
+                    &.takelowWidth{
+                        width: 60%;
+                        transition: width 0.5s ease-in 0.1s;
+                        
+                    }
+                    &.takeFullWidth{ 
+                        transition: width .5s ease-out;
+                    }
+                                    
+                    .conTemplateTop{
+                        display: flex;  
+                        justify-content: space-between;
+                        align-items: center;
+                        border-bottom: 1px solid #F2F2F9;
+                        .templateTopLeft{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            padding: 5px 10px;
+
+                            .firstLetter{
+                                width: 35px;
+                                height: 35px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 10px;
+                                font-size: 17px;
+                                font-weight: 500;
+                                
+                            }
+
+                            .topLeftNameShare{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 1px;
+
+                                .topLeftUserName{
+                                    font-size: 15px;
+                                    font-weight: 600;
+                                    color: #5C6169;
+                                }
+
+                                .shareDropDown{
+                                    .topLefShareWith{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        padding: 2px 10px;
+                                        border: none;
+                                        background: #ceecf1;
+                                        color: #2BB5C1;
+                                        border-radius: 5px;
+                                        font-size: 12px;
+                                    }
+                                    .shareWithMenu{
+                                        // padding: 0;
+                                        // width: 100px !important;
+                                        // border-radius: 10px;
+                                        .shareWithMenuList{
+                                            padding: 3px 7px;
+                                            margin: 0;
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 10px;
+                                            border-bottom: .5px solid #9097A0;
+                                            font-size: 13px;
+                                            &:last-child {
+                                                border: none;
+                                            }
+                                            .menuListIcon{
+                                                color: #32BECA;
+                                            }
+
+                                            .menuListTeam{
+                                                color: #495057;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .templateTopRight{
+
+                            .topRight{
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                .info{
+                                    height: 35px;
+                                    width: 35px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    background: #D0EEF1;
+                                    color: #32BECA;
+                                    font-size: 14px;
+                                    border-radius: 10px;
+                                    font-weight: 600;
+                                    cursor: pointer;
+
+                                }
+                                .arrows{
+                                    height: 35px;
+                                    width: 35px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    background: #D0EEF1;
+                                    color: #32BECA;
+                                    font-size: 14px;
+                                    border-radius: 10px;
+                                    font-weight: 600;
+                                    cursor: pointer;
+
+                                }
+                                .expireDropDown{
+                                    .topLefShareWith{
+                                        height: 35px;
+                                        width: 35px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        background: #D0EEF1;
+                                        color: #32BECA;
+                                        border: none;
+                                        border-radius: 10px;
+                                        font-size: 14px;
+
+                                        &.no-caret::after{
+                                            display: none;
+                                        }
+                                    }
+                                    .expireMenu{
+                                        padding-left: 10px;
+                                        border-radius: 20px;
+                                        
+                                        .expireMenuList{
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: flex-start;
+                                            gap: 3px;
+                                            
+                                            span{
+                                                font-size: 13px;
+                                            }
+                                            .expireOn{
+                                                color: #495057;
+                                            }
+                                            .dataTime{
+                                                color: #A0A9B6;
+                                            }
+                                            
+                                        }
+            
+                                    }
+                                }
+                                .statusChange{
+                                    .topLefShareWith{
+                                        height: 35px;
+                                        width: 35px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        background: #D0EEF1;
+                                        color: #32BECA;
+                                        border: none;
+                                        border-radius: 10px;
+                                        font-size: 14px;
+
+                                        &.no-caret::after{
+                                            display: none;
+                                        }
+                                    }
+                                    .statusDropdownMenu{
+                                        padding: 5px 0;
+                                        border-radius: 10px;
+
+                                        .statusDropdownMenuItem{
+
+                                            padding: 0 10px;
+                                            margin: 0;
+                                            border-bottom: 1px solid #EEEEEE; 
+
+                                            .statusMenuList{
+                                                margin: 0;
+                                                padding: 4px 0;
+                                                display: flex;
+                                                align-items: center;
+                                                gap: 3px; 
+
+                                                .statusText{
+                                                    margin-top: 2px;
+                                                }
+                                            }
+                                        }
+            
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .messagesContainerOuter{
+
+                        height: calc(100vh - 160px);
+                        overflow-y: auto;
+
+                    .messagesContianer{
+                        padding: 10px 15px;
+                        overflow-y: auto; /* Enable scrolling for the inner container */
+                        height: 100%; /* Expand to fit content */
+                        .recMessage{
+                            margin: 15px 0;
+                            .messageContainer{
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                gap: 10px;
+                                .user{
+
+                                    .userFirstLetter{
+                                        width: 30px;
+                                        height: 30px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border-radius: 10px;
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                    }
+
+                                    span{
+
+                                    }
+                                }
+                                .userMessage{
+                                    display: flex;
+                                    flex-direction: column;
+                                    background: #F5F7FB;
+                                    padding: 5px 10px;
+                                    border-top-right-radius: 10px;
+                                    border-bottom-right-radius: 10px;
+                                    border-bottom-left-radius: 10px;
+                                    max-width: 700px ;
+                                    min-width: 250px;
+                                    .messageText{
+                                        color: #5C6169;
+                                        word-wrap: break-word;
+                                        font-size: 13px;
+                                    }
+                                    .messageTime{
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        color: #A0A9B6;
+                                        font-size: 12px;
+                                    }
+                                }
+
+                                .attachFile{
+                                    background: #F5F7FB;
+                                    border-radius: 10px;
+                                    padding: 10px;
+                                } 
+
+                            }
+                        }
+
+                        .sendMessages{
+                            margin: 15px 0;
+                             .messageContainer{
+                                display: flex;
+                                flex-direction: row-reverse;
+                                align-items: center;
+                                justify-content: flex-start;
+                                gap: 10px;
+                                .user{
+
+                                    .userFirstLetter{
+                                        width: 30px;
+                                        height: 30px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border-radius: 10px;
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                    }
+                                    span{
+
+                                    }
+                                }
+                                .userMessage{
+                                    display: flex;
+                                    flex-direction: column;
+                                    background: #DDF9FC;
+                                    padding: 5px 10px;
+                                    border-top-left-radius: 10px;
+                                    border-bottom-right-radius: 10px;
+                                    border-bottom-left-radius: 10px;
+                                    max-width: 700px;
+                                    min-width: 250px;
+                                    .messageText{
+                                        color: #32BECA;
+                                        word-wrap: break-word;
+                                        font-size: 13px;
+                                    }
+                                    .messageTime{
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        color: #A0A9B6;
+                                        font-size: 12px;
+                                    }
+                                }
+
+                            }
+                        }
+                        .system{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            div{
+
+                                display: flex;
+                                align-items: center;
+                                gap:10px;
+
+                                padding: 10px;
+                                margin: 5px 0;
+                                background: #EDF6FF;
+                                max-width: 400px;
+                                color: #848B95;
+                                font-size: 13px;
+                                border-radius: 10px;
+                            }
+                        }
+
+
+                    }
+                    }
+                    .sendMessageContianer{
+                        padding: 0 40px;
+                        
+                        form{ display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        .inputContainer{
+                            flex: 1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            gap: 5px;
+                            border: 1px solid #DBDEE4;
+                            border-radius: 10px;
+                            background: white;
+                            padding: 0 10px;
+
+                            input{
+                                width: 85%;
+                                border: none;
+                                outline: none;
+                                margin: 10px;
+                            }
+                            .inputIcons{
+                                color: #BDBFC4;
+                                font-size: 20px;
+                                display: flex;
+                                align-items: center;
+
+                                span{
+                                    cursor: pointer;
+                                }
+                                .audio-recorder  {
+                                    background: none  !important;
+                                    box-shadow: none !important;
+                                }
+                                .fileTypeDropdown{
+                                    .fileTypeDropdownMenu{
+
+                                        padding: 2px;
+                                        .fileTypeDropdownItem{
+                                            // padding: 0;
+                                            // margin: 0;
+                                            .dropdownIcon{
+                                                display: flex;
+                                                align-items: center;
+                                                gap: 10px;
+                                                color: #5C6169;
+
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .QuickResponseContainer{
+                                    position: absolute;
+                                    color: #000;
+                                    bottom: 50px;
+                                    right: 20px;
+                                    font-size: 15px;
+                                    width: 300px;
+                                    height: 300px;
+                                    z-index: 2;
+                                    background: #FFFFFF;
+                                    border-radius: 10px;
+                                    border: 1px solid gray;
+                                
+                                    .Maincontainer{
+
+
+                                        .responseTop{
+
+                                            border-bottom: 1px solid #DBDEE4;
+
+                                            .crossIcon{
+                                                height: 20px;
+                                                width: 20px;
+                                                background: #EEEEEE;
+                                                color: #9097a0;
+                                                border-radius: 50%;
+                                                font-size: 12px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                            }
+                                        }
+                                        .quickResponseTextArea{
+                                            .textArea{
+                                                
+                                                
+                                                margin: 0 10px;
+                                                border: 1px solid #E5E8EE !important;
+                                                border-radius: 15px;
+                                                input{
+                                                    width: 95%;
+                                                    background: transparent;
+                                                    outline: none;
+                                                }
+                                            }
+                                        }
+                                        .quickResponseList{
+                                            display: flex;
+                                            flex-direction: column;
+                                            gap: 10px;
+                                            height: 210px;
+                                            overflow-y: scroll;
+                                            padding: 10px;
+
+                                            &.customHeight{
+                                                height: 155px;
+                                            }
+
+                                        .responseList{
+                                            border-bottom: 1px solid #AEB0BD;
+                                            
+                                                .truncatedText {
+                                                    overflow: hidden;
+                                                    text-overflow: ellipsis;
+                                                    white-space: nowrap;
+                                                    flex: 1;
+
+
+                                                }
+                                                .icons{
+
+                                                    span{
+                                                        font-size: 13px;
+                                                    
+                                                    }
+                                                    .editIcon{
+                                                        color: #65CF98;
+                                                    }
+                                                    .deleteIcon{
+                                                        color: #E85D7B;
+                                                    }
+                                                    
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    
+                                }
+                            }
+
+                        }
+                        .sendMessageIcon{
+                            flex: .1;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            font-size: 20px;
+                            .sendIcon{
+                                background: #D2F0F4;
+                                color: #59B6C1;
+                                width: 40px;
+                                height: 40px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 10px;
+                            }
+                            .checkIcon{
+                                color: #59B6C1;
+                                width: 40px;
+                                height: 40px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: 2px solid #59B6C1;
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+                    }
+
+                }
+            
+                
+        }
+
+    .userDetails{
+            background: white;
+            width: 40%;
+            .userDetaislContainer{
+                padding: 0 5px 0 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .userInfo{
+                    background: #F5F7FB;
+                    padding: 15px 10px;
+                    border-radius: 20px;
+                    
+
+                    .userInfoContainer{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        .userPriority{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            .priorityTitle{
+                                font-size: 13px;
+                                font-weight: 600;
+                                color: #5C6169;
+                            }
+                            .dropdown{
+
+                                .priorityDropdown{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    height: 20px;
+                                    width: 100px;
+                                    font-size: 13px;
+                                    margin: 0;
+                                    padding: 2px 5px;
+                                    background: #D2F0F4;
+                                    border: none;
+                                }
+                                .customMenu{
+                                    min-width: 100px !important;
+                                    margin: 0 !important;
+                                    padding: 0;
+
+                                    .dropdownItems{
+                                        font-size: 12px;
+                                        padding: 5px 10px;
+                                    }
+                                }
+                            }
+
+                        }
+
+                        .userContactNo{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+
+                            .contactIcon{
+                                background: #D0EEF1;
+                                color: #5EBFCA;
+                                padding: 2px 5px;
+                                border-radius: 10px;
+                                font-size: 12px;
+                            }
+                            .contactNo{
+                                color: #9097A0;
+                            }
+                        }
+                        .userContactEmail{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+
+                            .emailIcon{
+                                background: #D0EEF1;
+                                color: #5EBFCA;
+                                padding: 2px 5px;
+                                border-radius: 10px;
+                                font-size: 12px;
+                            }
+                            .email{
+                                color: #9097A0;
+                            }
+                        }
+
+                        .userCreation{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            
+
+                            .calendarIcontitle{
+                               display: flex;
+                               align-items: center;
+                               gap: 10px;
+                                .calendarIcon{
+                                    font-size: 12px;
+                                    color:#5C6169;
+                                }
+
+                                .title{
+                                    color: #5C6169;
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                }
+                            }
+                            .dateTime{
+                                color: #9097A0;
+                                font-size: 15px;
+                            }
+                            
+                        }
+
+                        .userBlock{
+                            span{
+                                padding: 1px 12px;
+                                background: #F6D1DB;
+                                color: #F65F7C;
+                                border-radius: 10px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+
+                .userQueryInfo{
+                    display: flex;
+                    gap: 10px;
+                    color: #5C6169;
+
+                    .totalQueries{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        background: #FDEEC1;
+                        padding: 10px;
+                        border-radius: 20px;
+                        .queryCount{
+                            font-size: 25px;
+                            font-weight: 600;
+                        }
+                        .queryDescription{
+                            font-size: 14px;
+                        }
+                    }
+
+                    .userInteracting{
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        background: #DCFFEA;
+                        padding: 10px;
+                        border-radius: 20px;
+                        .interactingTitle{
+                            font-size: 13px;
+                        }
+                        .interactingDate{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            font-size: 13px;
+                        }
+                    }
+                }
+
+                .userLabelNotes{
+                    background: #F5F7FB;
+                    border-radius: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .userLabel{
+                        padding: 10px 10px 0 10px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        .labelTop{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: centere;
+                            .labelTitle{
+                                color: #5C6169;
+                                font-size: 14px;
+                                font-weight: 500;
+                            }
+                            .labelIconTitle{
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
+                                font-size: 12px;
+                                color: #2BB5C1;
+
+                                .labelIcon{
+                                    cursor: pointer;
+                                }
+                                .labelManage{
+                                    cursor: pointer;
+
+                                }
+                            }
+                        }
+
+                        .labelAdd{
+                            position: relative;
+                            .labelInput{
+                                border: 1px solid #ccc;
+                                padding: 0 10px;
+                                width: 90%;
+                                border-radius: 10px;
+                                span{
+
+                                }
+                                input{
+                                    width: 90%;
+                                    font-size: 13px;
+                                    border: none;
+                                    outline: none;
+                                    background: transparent;
+
+                                    &::placeholder{
+                                        font-size: 13px;
+                                    }
+
+                                }
+                            }
+                           
+                            .labelResult{
+                                position: absolute;
+                                width: 90%;
+                                padding: 0 5px;
+                                .labels{
+                                    height: 120px;
+                                    background: #fff;
+                                    overflow: auto;
+                                    
+                                    .labelList{
+                                        padding: 5px;
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 10px;
+                                        cursor: pointer;
+
+                                        &:hover{
+                                            background: #F5F7FB;
+                                        }
+
+                                        .labelListColor{
+                                            width: 10px;
+                                            height: 10px;
+                                            border-radius: 50%;
+
+                                        }
+                                        .labelName{
+                                            span{
+                                                font-size: 13px;
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                    .hr{
+                        height: 1px;
+                        width: 100%;
+                        background: #EEEEEE;
+                    }
+                    .userNotes{
+                        padding: 0 10px 10px 10px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        .noteTop{
+                            color: #5C6169;
+                            font-size: 14px;
+                            font-weight: 500;
+                        }
+
+                        .noteAdd{
+                            span{
+
+                                background: #D0EEF1;
+                                color: #32BECA;
+                                padding: 2px 10px;
+                                border-radius: 10px;
+                                font-size: 13px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+
+ 
+}
+
+.messageContainer::-webkit-scrollbar{
+
+    width: 0 !important;
+
+}
+.messageContainer::-webkit-scrollbar-track{
+
+    // background: trans !important;
+
+}
+
+
+
+.messageContainer::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 3px;
+    // height: 10px;
+
+}
+.messagesContianer::-webkit-scrollbar{
+    display: block;
+    width: 5px;
+    height: 5px;
+}
+                    
+                    
+                    
+                    .messagesContianer::-webkit-scrollbar-thumb{
+                        background-color: #888;
+                        border-radius: 20px;
+                        // height: 10px;
+
+                    }
+                    
+                    
+
+                
+
+.testActive {
+  background-color: #FAFDFF;
+  margin-left: 10px;
+}
+
+
+
+
+.checkCss{
+    // border: 1px solid black;
+}
+
+.above-active{
+    border-top-right-radius: 40px;
+    // border: 1px solid black;
+    box-shadow: 30px 0 0 0 #FAFDFF
+}
+.below-active{
+    border-bottom-right-radius: 40px;
+    box-shadow: 30px 0 0 0 #FAFDFF
+}
+
+
+
+.no-caret::after{
+    display: none;
+}

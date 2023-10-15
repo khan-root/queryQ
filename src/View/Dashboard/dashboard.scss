@@ -1,0 +1,482 @@
+.dash{
+    margin-top: 50px;
+    margin-left: 10px;
+    .dashTop{
+        position: relative;
+        .teamsMain{
+            .teamsContainer{
+                background: #32BECA;
+                padding: 10px 10px;
+                border-radius: 15px;
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .teamsTitle{
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+                .teamsCount{
+                    display: flex;
+                    align-items: center;
+                    padding-right: 15px;
+                    justify-content: space-between;
+
+                    .teamsTotal{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        .teamsIcon{
+                            font-size: 35px;
+                        }
+                        .teamsInfo{
+                            display: flex;
+                            align-items: flex-start;
+                            flex-direction: column;
+
+                            .teamsInfoTotalTeam{
+                                font-size: 20px;
+                                font-weight: 500;
+                            }
+                            .teamsInfoText{
+                                font-size: 14px;
+                                font-weight: 500;
+                            }
+                        }
+                        .teamsMemeber{
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+
+                            .teamsMemberTotal{
+                                font-size: 20px;
+                                font-weight: 500;
+                            }
+                            .teamsMemberText{
+                                font-size: 14px;
+                                font-weight: 500;
+                            }
+                        }
+
+                    }
+                    .verticalHr{
+                        width: 2px;
+                        height: 25px;
+                        background: #fff;
+                    }
+                }
+                .dashOnlineUsers{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    padding-bottom: 13px;
+                    .onlineUserTitle{
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+
+                    .dashOnlineUsersSlider{
+                        margin: 0 auto;
+                        .mainSlider{
+                            width: 320px !important;
+                            svg{
+                                background: #2CADB8;
+                                width: 25px;
+                                height: 30px;
+                                display: flex !important;
+                                align-items: center;
+                                justify-content: center;
+                                color: white;
+                                border-radius: 10px;
+                            }
+                            
+                            .sliderList{
+                                width: 60px !important;
+                                display: flex !important;
+                                align-items: center;
+                                justify-content: center;
+                                position: relative;
+                                margin: 0 auto;
+                                
+                                img{
+                                    width: 60px;
+                                    height: 60px;
+                                    object-fit: cover;
+                                    border-radius: 50%;
+                                    border: 2px solid #fff;
+                                    
+                                }
+                                span{
+                                    position: absolute;
+                                    width: 15px;
+                                    height: 15px;
+                                    background: #47D384;
+                                    border-radius: 100%;
+                                    bottom: 5px;
+                                    right: 0;
+                                    border: 2px solid #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mainQueries{
+            border: 1px solid #eee;
+            padding: 10px;
+            border-radius: 10px;
+            .queriesContainer{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .queriesTitle{
+                    color: #495057;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+                .totalQueries{ 
+                    background: #32BECA;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    border-radius: 30px;
+                    padding: 5px 2px;
+
+                    .queriesIcon{
+                        height: 30px;
+                        width: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content:center;                        background: #fff;
+                        color: #32BECA;
+                        border-radius: 50%;
+                        font-size: 19px;
+                    }
+                    .queriesInfo{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        position: relative;
+                        .queriesInfoNumbers{
+                            font-size: 18px;
+                            font-weight: 500;
+                            color: #fff;
+                        }
+                        .queriesInfoText{
+                            font-size: 11px;
+                            color: #fff;
+                            // white-space: nowrap; /* Prevents the text from wrapping */
+                            // overflow-wrap: break-word;
+
+                        }
+                    }
+                }
+                .subCategoryQueries{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 5px;
+                    margin-bottom: 18px;
+
+                    .subtotalQueries{ 
+                        background: #32BECA;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 10px;
+                        border-radius: 30px;
+                        padding:5px 0 9px 5px;
+
+                    .subqueriesIcon{
+                        height: 30px;
+                        width: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content:center;                        
+                        background: #fff;
+                        color: #32BECA;
+                        border-radius: 50%;
+                        font-size: 18px;
+                    }
+                    .subqueriesInfo{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        position: relative;
+                        .subqueriesInfoNumbers{
+                            font-size: 18px;
+                            font-weight: 500;
+                            color: #fff;
+                        }
+                        .subqueriesInfoText{
+                            font-size: 10px;
+                            color: #fff;
+                            // white-space: nowrap; /* Prevents the text from wrapping */
+                            // overflow-wrap: break-word;
+
+                        }
+                    }
+                }
+
+                    // .subtotalQueries{
+                    //     background: #32BECA;
+                    //     display: flex;
+                    //     flex-direction: row;
+                    //     align-items: center;
+                    //     padding: 0 10px;
+                    //     gap: 10px;
+                    //     border-radius: 40px;
+                    //     width: 100%;
+                    //     height: 80px;
+
+                    //     .subqueriesIcon{
+                    //         height: 40px;
+                    //         width: 40px;
+                    //         display: flex;
+                    //         align-items: center;
+                    //         justify-content:center;                        background: #fff;
+                    //         color: #32BECA;
+                    //         border-radius: 50%;
+                    //         font-size: 25px;
+                    //     }
+                    //     .subqueriesInfo{
+                    //         display: flex;
+                    //         flex-direction: column;
+                    //         align-items: center;
+                            
+                    //     }
+
+                    // }
+                }
+            }
+
+
+        }
+        .mainUsers{
+            .usersContainer{
+                padding: 10px 5px 3px 10px;
+                border: .5px solid #EEEEEE;
+                border-radius: 10px;
+                .usersTitle{
+                    color: #495057;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+                .usersLists{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    margin-top: 20px;
+                    margin-bottom: 35px;
+                    .userList{
+                        display: flex;
+                        align-items: center;
+                        gap: 25px;
+
+                        .userInfo{
+                            display: flex;
+                            align-items: center;
+
+                            .userNumber{
+                                width: 22px;
+                                height: 22px;
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #fff;
+                                font-size: 13px;
+                                
+                            }
+                            .userNumber-0{
+                                background: #5390C9;
+                            }
+                            .userNumber-1{
+                                background: #FFC107;
+                            }
+                            .userNumber-2{
+                                background: #F65F7C;
+                            }
+                            .userLine{
+                                width: 25px;
+                                height: 2px;
+                            }
+                            .userLine-0{
+                                background: #5390C9;
+                            }
+                            .userLine-1{
+                                background: #FFC107;
+                            }
+                            .userLine-2{
+                                background: #F65F7C;
+                            }
+                            .userImage{
+                                width: 40px;
+                                height: 40px;
+                                object-fit: cover;
+                                border-radius: 50%;
+                                border: 2px solid #5390C9;
+                                
+                            }
+                            .userImage-0{
+                                border: 2px solid #5390C9;
+                            }
+                            .userImage-1{
+                                border: 2px solid #FFC107;
+                            }
+                            .userImage-2{
+                                border: 2px solid #F65F7C;
+                            }
+                        }
+
+                        .userName{
+                            font-size: 15px;
+                            font-weight: 500;
+                        }
+                        .userName-0{
+                            color: #5390C9;
+                        }
+                        .userName-1{
+                            color: #FFC107;
+                        }
+                        .userName-2{
+                            color: #F65F7C;
+                        }
+                        .userVerticalHr{
+                            width: 2px;
+                            height: 15px;
+                            background: #495057;
+                        }
+                        .userTime{
+                            font-size: 13px;
+                            font-weight: 600;
+                            color: #495057;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    .dashBottom{
+    
+        .reports{
+            border: 1px solid #EEEEEE;
+             border-radius: 10px;
+            //  margin-right: 2px;
+            .reportsMain{
+                
+                .reportsHeader{
+                    padding: 5px 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .reportsTitle{
+                        color: #495057;
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+
+                    .selectReportDate{
+
+                        .reportForm{
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                        }
+
+                    }
+                }
+
+                                
+            }
+        }
+
+        .activeChannel{
+            .channelMain{
+                padding: 5px 0 ;
+                border: 1px solid #EEEEEE;
+                border-radius: 10px;
+
+                .channelUpper{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 5px 15px;
+
+                    .channelTitle{
+                        color: #495057;
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+                    .channelAddbtn{
+                        border: none;
+                        background: #32BECA;
+                        color: #fff;
+                        font-size: 14px;
+                        padding: 0 10px;
+                        border-radius: 5px;
+                    }
+                }
+
+                .channelLower{
+                
+                    .channelList{
+                        border-bottom: .5px dashed #eee;
+                        padding: 10px 15px;
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+
+                        .channelIcon{
+                            width: 35px;
+                            height: 35px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 100%;
+                            color: #fff;
+                            cursor: pointer;
+
+                            &.channelIcon-1{
+                                background: #F65F7C;
+                            }
+                            &.channelIcon-2{
+                                background: #3B5998;
+                            }
+                            &.channelIcon-3{
+                                background: #55CD6C;
+                            }
+                            &.channelIcon-4{
+                                background: #03A9F4;
+                            }
+                            &.channelIcon-5{
+                                background: #FD9A00;
+                            }
+
+                            
+                        
+                        }
+
+                        .channelName{
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: #495057;
+                        }
+                    }
+                }
+            }
+        
+
+            
+        }
+        
+    }
+    
+
+}
+
+

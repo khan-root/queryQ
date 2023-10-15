@@ -1,0 +1,19 @@
+.svgMain{
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+                
+
+    .svgText{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+        color: '#0D3A4F';
+        font-size: 20px;
+        font-weight: 600;
+    }
+                
+}

@@ -1,0 +1,675 @@
+// @import '../../styles/button.module.scss';
+.mainTeam{   
+    margin-top: 45px;
+    .teamMainContainer{
+        position: relative;
+        width: 100%;
+   
+
+    .teamTemplate{
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - 45px);
+        // background: gray;
+
+
+        .templateLeft{
+            background-color: #F5F7FB;
+            height: calc(100vh - 45px);
+
+            .leftTop{
+
+                padding: 0 10px;
+                padding-top: 15px;
+                .topContainer{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .team{
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        .teamIcon{
+                            font-size: 19px;
+                            color: #32BECA;
+                            margin-bottom: 3px;
+                        }
+                        .teamTitle{
+                            font-size: 17px;
+                            font-weight: 600;
+                            color: #232336;
+                        }
+                    }
+                    .addTeam{
+                        button{
+                            // @include addBtn;
+                            padding: 5px 8px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .teamSearch{
+                    margin: 10px 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    border: 1px solid #E5E8EE;
+                    padding: 2px 10px;
+                    border-radius: 10px;
+
+                    span{
+                        color: #E5E8EE;
+                    }
+                    input{
+                        border: 0;
+                        width: 100%;
+                        outline: none;
+                        background: transparent;
+
+                        &::placeholder{
+                            color: #E5E8EE;
+                        }
+                    }
+                        
+                }
+
+            }
+            .leftBottom{
+                height: calc(100vh - 145px);
+                overflow-y: scroll;
+
+                .team{
+
+                    margin-left: 20px;
+                    padding: 5px 0;
+
+                    &.notActive{
+
+                    }
+                    &.Active{
+                        background: #FAFDFF;
+                        border-top-left-radius: 40px;
+                        border-bottom-left-radius: 40px;
+                    }
+                    &.above-active{
+                        border-top-right-radius: 40px;
+                        // border: 1px solid black;
+                        box-shadow: 30px 0 0 0 #FAFDFF
+                    }
+                    &.below-active{
+                        border-bottom-right-radius: 40px;
+                        box-shadow: 30px 0 0 0 #FAFDFF
+                    }
+
+
+                    .teamContainer{
+                        .teamList{
+                            margin: 0 10px 0 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            padding: 10px 0;
+                            
+                            .teamTitle{
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                .teamLetter{
+                                    width: 35px;
+                                    height: 35px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border-radius: 10px;
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                    color: #fff;
+                                    cursor: pointer;
+                                }
+                                .title{
+                                    color: #383D47;
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    cursor: pointer;
+                                }
+                            }
+
+                            .teamCrudIcon{
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
+                                .edit{
+                                    height: 20px;
+                                    width: 20px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    background: #B8FFD4;
+                                    color: #47D384;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                }
+                                .delete{
+                                    height: 20px;
+                                    width: 20px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    background: #FAD4DE;
+                                    color: #F65F7C;
+                                    border-radius: 5px;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+
+                    .teamDetailsContainer{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 30%;
+                        border: 1px solid black;
+                        width: 70%;
+                    }
+
+                }
+            }
+        }
+
+        .teamDetailsContainer{
+            background: #FAFDFF;
+            // padding: 5px 0 ;
+            padding: 5px 0 15px 15px;
+
+            .usersContainer{
+
+                .top{
+                   
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    border-bottom: .5px solid #F2F2F9;
+                    padding: 5px 0;
+                    margin-bottom: 20px;
+                    
+                    .teamFirstLetter{
+                        width: 35px;
+                        height: 35px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 10px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: #fff;
+                    }
+                    .teamTitle{
+                        color: #383D47;
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                }
+
+                .teamUsers{
+                    height: calc(100vh - 116px);
+                    overflow-y: auto;
+
+
+                    .userList{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 10px 0;
+                        border-bottom: 1px dashed #BEBEBE;
+                        .user{
+
+
+                            
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            .userDp{
+                                width: 35px;
+                                height: 35px;
+                                border-radius: 50%;
+                                
+                            }
+                            .userName{
+                              color: #383D47;
+                              font-size: 14px;
+                              font-weight: 500;
+                            }
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                background: #47D384;
+                                width: 10px;
+                                height: 10px;
+                                bottom: 2px;
+                                left: 30px;
+                                border-radius: 100%;
+                                border: 2px solid white;
+                            }
+                        }
+                        .userDetails{
+                            display: flex;
+                            align-items: center;
+                            flex-direction: row;
+                            .customDropdown{
+                                
+                                .detailsBtn{
+                                    background-color: #D0EEF1;
+                                    color: #2BB5C1;
+                                    font-size: 14px;
+                                    border: none;
+                                    padding: 2px 10px;
+
+
+                                    &::after{
+                                        display: none;
+                                    }
+                                }
+                                    
+                                    .dropdownCustomMenu{
+                                        
+                                        border: 2px solid #EEEEEE ;
+                                        padding: 0;
+                                        width: 200px;
+                                        .dropdownCustomMenuContainer{
+                                            display: flex;
+                                            flex-direction: column;
+                                            div{
+                                                padding: 5px 10px;
+                                                display: flex;
+                                                align-items: center;
+                                                gap: 10px;
+                                                justify-content: space-between;
+                                                border-bottom: 1px solid #EEEEEE;
+                                            
+                                                .title{
+                                                    font-size: 14px;
+                                                    font-weight: 600;
+                                                    color: #495057;
+                                                }
+                                                .desc{
+                                                    font-size: 12px;
+                                                }
+                                            }
+
+                                            .userId{
+
+                                            }
+                                        }   
+                                    }
+                            }
+
+                            .moreIconDropDown{
+                                
+                                .detailsIcon{
+                                    cursor: pointer;
+                                    color: #A0A9B6;
+                                    background: #FAFDFF;
+                                    border: none;
+                                    padding: 0;
+                                    margin: 0;
+
+                                    &::after{
+                                        display: none;
+                                    }
+                                }
+                                    
+                                    .moreIconDropDownMenu{
+                                        
+                                        border: 2px solid #EEEEEE ;
+                                        padding: 0;
+                                        width: 210px;
+
+                                        
+
+                                        .detailsContainer{
+                                            div{
+                                                display: flex;
+                                                align-items: center;
+                                                gap: 10px;
+                                                padding: 5px 10px;
+                                                cursor: pointer;
+                                                
+                                                
+
+                                                .crossIcon{
+                                                    width: 15px;
+                                                    height: 15px;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    background: #F65F7C;
+                                                    color: #fff;
+                                                    font-size: 12px;
+                                                    border-radius: 50%;
+                                                }
+                                                .trashIcon{
+                                                    color: #F65F7C;
+                                                    
+                                                }
+                                                .iconDesc{
+                                                    font-size: 14px;
+                                                    color: #495057;
+                                                }
+
+                                                &:hover{
+                                                    background: #F6F7FB;
+                                                }
+                                            }
+                                        }
+                                       
+                                    }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .addMembersContainer{
+            background: #FAFDFF;
+            border-left: 1px solid #EEEEEE;
+            
+            .members{
+
+                .membersTop{
+                    display: flex;
+                    align-items: center;
+                    .heading{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        padding: 5px 10px;
+                        border: none;
+                        font-weight: 600;
+                        color: #5C6169;                      
+                    }
+                    .activeHeading{
+                        color: #fff;
+                        background: #32BECA;
+                        
+                    }
+                }
+                .addNewUser{
+                        padding-top: 10px;
+                        padding-right: 10px;
+                        // margin-left: 10px;
+                        margin-right: 5px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-end;
+                           .newUserBtn{
+                                margin-right: 10px;
+                                background-color: #D0EEF1;
+                                color: #2BB5C1;
+                                font-size: 14px;
+                                border: none;
+                                padding: 5px 15px;
+                                font-size: 14px;
+                                border-radius: 10px;
+                            }
+                        }
+                .content{
+                    display: none;
+
+                    .queryQContainer{
+                       height: 87vh;
+                       padding: 5px 5px 5px 0;
+                       display: flex;
+                       flex-direction: column;
+                    //    gap: 5px;
+                       
+
+                        .addMemberTab{
+                            display: flex;
+                            // flex-direction: column;
+                            align-items: centere;
+                            .heading{
+                                padding: 5px 10px;
+                                border: none;
+                                font-weight: 600;
+                                color: #5C6169;  
+                                cursor: pointer;                    
+                            }
+                            .activeHeading{
+                                color: #32BECA;
+                                
+                            }
+                        }
+                        .addTabs{
+                            padding: 10px 10px;
+
+                            .inviteMemberConainer{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+
+                                .inviteMemberTitle{
+                                    span{
+                                        font-size: 15px;
+                                        color: #5C6169;
+                                        font-weight: 500;
+                                    }
+                                }
+                                .inviteMemberDescript{
+                                    span{
+                                        font-size: 12px;
+                                    }
+                                }
+                                .inviteMemberTextArea{
+                                    border: 1px solid #E2E2E2;
+                                    border-radius: 10px;
+                                    background: #fff;
+                                    height: 120px;
+                                    padding: 5px 10px;
+                                    overflow-y: scroll;
+                                    input{
+                                        background: transparent;
+                                        border: none;
+                                        outline: none;
+                                        width: 100%
+                                    }
+                                    .emailList{
+                                        margin-top: 10px;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        gap: 5px;
+                                        padding: 0;
+                                        .memberEmail{
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 20px;
+                                            width: fit-content;
+                                            list-style: none;
+                                            padding: 5px 15px;
+                                            border: 1px solid #e2e2e2;
+                                            background: #dddddd29;
+
+                                            border-radius: 20px;
+
+                                            .email{
+
+                                            }
+                                            .remIcon{
+                                                font-size: 14px;
+                                                color: red;
+                                                cursor: pointer;
+                                            }
+                                        }
+
+                                    }
+                                }
+                                .inviteMemberInvite{
+                                    margin-top: 10px ;
+                                    button{
+                                        background-color: #D0EEF1;
+                                        color: #2BB5C1;
+                                        font-size: 14px;
+                                        border: none;
+                                        padding: 5px 15px;
+                                        font-size: 14px;
+                                        border-radius: 10px;
+                                    }
+                                }
+                            }
+
+                            .empleadoMain{
+
+                        .empleadoTop{
+                            margin-top: 3px;
+                            padding: 0 10px;
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                            .topIcon{
+                                color: #32BECA;
+                            }
+                            .topDesc{
+                                font-size: 13px;
+                                color: #5C6169;
+                            }
+                        }
+
+                        .empleadoMember{
+                            height: calc(100vh - 196px);
+                            overflow-y: scroll;
+                            .memberContainer{
+                                padding: 20px 0;
+                                margin-left: 10px;
+                                margin-right: 60px;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                                .memberList{
+                                    border-bottom: 1px dashed #BEBEBE;
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 15px;
+                                    padding-bottom: 10px;
+                                    .memberImg{
+                                        width: 45px;
+                                        height: 45px;
+                                    }
+                                    .memberName{
+                                        color: #383D47;
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                        }
+                    }
+
+                    .empleadoMain{
+
+                        .empleadoTop{
+                            margin-top: 3px;
+                            padding: 0 10px;
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                            .topIcon{
+                                color: #32BECA;
+                            }
+                            .topDesc{
+                                font-size: 13px;
+                                color: #5C6169;
+                            }
+                        }
+
+                        .empleadoMember{
+                            height: calc(100vh - 147px);
+                            overflow-y: scroll;
+                            .memberContainer{
+                                padding: 20px 0;
+                                margin-left: 10px;
+                                margin-right: 60px;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                                .memberList{
+                                    border-bottom: 1px dashed #BEBEBE;
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 15px;
+                                    padding-bottom: 10px;
+                                    .memberImg{
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                    .memberName{
+                                        color: #383D47;
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                .activeContent{
+                    display: block;
+                    
+                }
+            }
+        }
+
+        .teamSvgContainer{
+            position: absolute;
+            right: 0;
+            width: calc(100vw - 25.6rem);
+            height: calc(100vh - 40px);
+        }
+        
+
+    }
+}}
+
+.leftBottom::-webkit-scrollbar{
+                    
+                    width: 0 !important;
+                    
+                }
+.leftBottom::-webkit-scrollbar-track{
+                    
+                    background: none !important;
+                    
+                }
+                 
+                    
+
+                    // .leftBottom::-webkit-scrollbar-thumb {
+                    //     background-color: #888;
+                    //     border-radius: 3px;
+                    //     // height: 10px;
+
+                    // }
+.teamUsers::-webkit-scrollbar{
+                    
+    width: 0 !important;
+    
+}
+.teamUsers::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 3px;
+    // height: 10px;
+
+}
+.inviteMemberTextArea::-webkit-scrollbar{
+                    
+    width: 0 !important;
+    
+}
+.empleadoMember::-webkit-scrollbar{
+                    
+    width: 0 !important;
+    
+}

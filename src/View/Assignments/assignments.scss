@@ -1,0 +1,202 @@
+.assignmentsContainer{
+    margin-top: 50px;
+    height: calc(100vh - 50px);
+    width: calc(100vw - 70px);
+    margin-left: 5px;
+
+    .assignmentMain{
+        
+        padding: 10px;
+        .assignmentHeader{
+
+            .headerLeft{
+                .assignmentIcon{
+                    font-size: 19px;
+                    color: #32BECA;
+                    margin-top: 3px;
+                }
+                .assignmentTitle{
+                    font-size: 17px;
+                    font-weight: 600;
+                    color: #232336;
+                }
+            }
+            .headerRight{
+                button{
+                    border: none;
+                    background: #CEECF1;
+                    color: #32BECA;
+                    padding: 2px 5px;
+                    border-radius: 5px;
+                    font-size: 13px;
+                }
+            }
+        }
+        .assignmentTableContainer{
+            
+            // padding: 5px;
+            // border-radius: 10px;
+            // border: 1px solid black;
+            // padding: 0 5px;
+            height: calc(100vh - 112px);
+            overflow: auto;
+            .assignmentTable{
+                position: relative;
+
+                .tableHeader{
+                    
+                    background: #32BECA;
+                    color: #fff;
+                    position: sticky;
+                    top: -1px;
+                    // z-index: 20;
+                }
+                .tableBody{
+                    .tableIcons{
+                        display: flex;
+                        align-items: center;
+                        gap: 4px;
+
+                        .editIcon{
+                            background: #B8FFD4;
+                            color: #47D384;
+                            padding: 2px 5px;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
+                        .filterIcon{
+                            background: #D1EBFF;
+                            color: #54A5F4;
+                            padding: 2px 5px;
+                            border-radius: 5px;
+                            cursor: pointer;
+
+                        }
+                        .deleteIcon{
+                            color: #FF385C;
+                            border-radius: 5px;
+                            background-color: #FAD4DE;
+                            padding: 2px 5px;
+                            cursor: pointer;
+                        }
+                        .seenIcon{
+                            color: #3DA5F4;
+                            border-radius: 5px;
+                            background-color: #D1EBFF;
+                            padding: 2px 5px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+
+}
+
+// .assignmentCanvas{
+//     width: 35vw !important;
+//     transition: transform .4s ease-in-out;
+
+//     .assignmentCanvasHeader{
+//         border-bottom: 1px solid #EEEEEE;
+    
+//     }
+//     .assignmentCanvasBody{
+//         padding: 0;
+//         margin: 0;
+//         // .canvasContainer{
+//         //     padding: 10px 10px 0 10px;
+//         //     display: grid;
+//         //     grid-template-columns: repeat(2, 1fr);
+            
+//         //     row-gap: 20px ;
+//         //     .list{
+//         //         display: flex;
+//         //         align-items: center;
+//         //         gap: 10px;
+//         //         border-bottom: 1px dashed #EEEEEE;
+//         //         padding-bottom: 10px;
+//         //         // margin-bottom: ;
+//         //         .listIcon{
+//         //                 width: 40px;
+//         //                 height: 40px;
+//         //                 background: #32BECA;
+//         //                 display: flex;
+//         //                 align-items: center;
+//         //                 justify-content: center;
+//         //                 border-radius: 10px;
+//         //             span{
+//         //                 color: white;
+//         //                 font-size: 18px;
+//         //             }
+//         //         }
+//         //         .listDetail{
+//         //             display: flex;
+//         //             flex-direction: column;
+//         //             .title{
+//         //                 color: #495057;
+//         //             }
+//         //             .desc{
+//         //                 font-size: 11px;
+//         //             }
+//         //         }
+//         //     }
+//         // }
+//     }
+
+// }
+// .addAssignmentCanvas{
+//     width: 40vw !important;
+//     transition: transform .4s ease-in-out;
+
+//     .addAssignmentCanvasHeader{
+//         border-bottom: 1px solid #EEEEEE;
+    
+//     }
+//     .addAssignmentCanvasBody{
+        
+//         .addAssignmentCanvasContainer{
+//             display: flex;
+//             flex-direction: column;
+//             gap: 10px;
+
+//             .label{
+//                 display: flex;
+//                 flex-direction: column;
+//                 gap: 5px;
+//                 input{
+//                     border-radius: 10px;
+//                     border: 1px solid #B3B3B3;
+//                     outline: none;
+//                     padding: 5px 20px;
+//                     color: #495057;
+
+//                     &::placeholder{
+//                         color: #999,
+//                     }
+
+//                 }
+//             }
+
+            
+            
+//         }
+//     }
+
+// }
+
+.assignmentTableContainer::-webkit-scrollbar{
+                    
+    width: 5px !important;
+    
+}
+
+.assignmentTableContainer::-webkit-scrollbar-thumb {
+    background-color: #5EBFCA;
+    border-radius: 5px;
+    // height: 10px;
+
+}

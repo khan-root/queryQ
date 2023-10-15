@@ -1,0 +1,71 @@
+.main{
+    border: 1px solid red;
+
+    .Maincontainer{
+
+
+    .responseTop{
+
+    border-bottom: 1px solid #DBDEE4;
+
+    }
+    .quickResponseTextArea{
+    .textArea{
+        
+        
+        margin: 0 10px;
+        border: 1px solid #E5E8EE !important;
+        border-radius: 15px;
+        input{
+            width: 95%;
+            background: transparent;
+            outline: none;
+        }
+    }
+    }
+    .quickResponseList{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 210px;
+    overflow-y: scroll;
+    padding: 10px;
+
+    &.customHeight{
+        height: 155px;
+    }
+
+    .responseList{
+        border-bottom: 1px solid #AEB0BD;
+        // margin: 3px 0;
+
+
+        
+        
+            .truncatedText {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                flex: 1;
+
+
+            }
+            .icons{
+
+                span{
+                    font-size: 13px;
+                
+                }
+                .editIcon{
+                    color: #65CF98;
+                }
+                .deleteIcon{
+                    color: #E85D7B;
+                }
+                
+            }
+    }
+    }
+    }
+
+}

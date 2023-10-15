@@ -1,0 +1,41 @@
+$mainLightColor: #D0EEF1;
+$mainColor: #2BB5C1;
+$button-padding: 0.3rem 1rem;
+$dangerLightColor: #F6D1DB;
+$dangerMainColor: #F65F7C;
+
+.addBtn {
+  background-color: $mainLightColor;
+  color: $mainColor;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  &:hover {
+    background-color: $mainColor;
+    color: $mainLightColor;
+  }
+}
+
+.remBtn {
+  background-color: $dangerLightColor;
+  color: $dangerMainColor;
+  transition: background-color 0.2s ease;
+  &:hover {
+    background-color: $dangerMainColor;
+    color: $dangerLightColor;
+  }
+}
+
+.buttonStyle {
+  padding: $button-padding;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+
+  &.primaryBtn {
+    @extend .addBtn;
+  }
+
+  &.dangerBtn {
+    @extend .remBtn;
+  }
+}

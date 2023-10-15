@@ -1,0 +1,94 @@
+.filterContainer{
+
+    display: flex;
+    .filterButtons{
+        display: flex;
+        padding-left: 5px;
+        height: calc(100vh - 50px);
+        position: relative;
+        
+        span{
+            cursor: pointer;
+            padding: 3px 15px;
+            font-size: 15px;
+        }
+
+        &.active{
+            font-weight: 600
+        }
+        .filterbuttons__form{
+            
+            position: fixed !important;
+            width: 4rem;
+            top: 48px;
+            height: 100%;
+            border-right: .5px solid #eee;
+            padding-top: 10px;
+            padding-right: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-right: 20px;
+            background: #fff;
+            z-index: 10;
+            
+            transition:all .4s ease-in-out;
+            &:hover{
+                width: 14rem;
+
+            }
+            
+
+            .heading{
+                color: #9097A0;
+                display: flex;
+                align-items: center;
+                padding: 5px 0;
+                cursor: pointer;
+
+                span{
+                    font-size: 18px;
+                    
+                }
+                .headingName{
+                    padding: 0 10px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                }
+
+                
+
+
+                &:hover{
+                    background:#32BECA ;
+                    color:#fff ;
+                    border-radius: 10px;
+                }
+            }
+            .activeHeading{
+                color: #fff;
+                background: #32BECA;
+                border-radius: 10px;
+                
+            }
+            
+
+        }
+    }
+        .tabContainer{
+            width: calc(100vw - 100px);
+            height: calc(100vh - 50px);
+            margin-left: 60px;
+            .content{
+                display: none;
+            }
+            
+            .activeContent{
+                display: block;
+                
+            }
+        }
+
+}
